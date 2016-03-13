@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.5133779264214047" layoutX="64.0" layoutY="32.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -53,6 +52,12 @@
                         <Label text="Master" GridPane.rowIndex="4" />
                         <Label text="Code Etudiant" />
                         <Label text="Semestre" GridPane.rowIndex="5" />
+                        <Label text="Label1" GridPane.columnIndex="1" />
+                        <Label text="Label2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Label3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Label4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Label5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Label6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                   <ButtonBar layoutX="73.0" layoutY="358.0" prefHeight="40.0" prefWidth="333.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="16.0">
