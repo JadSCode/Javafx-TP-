@@ -11,17 +11,17 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HomeController">
    <children>
       <SplitPane dividerPositions="0.5133779264214047" layoutX="64.0" layoutY="32.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="298.0">
                <children>
-                  <TableView layoutX="33.0" layoutY="7.0" prefHeight="398.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="personTable" layoutX="33.0" layoutY="7.0" prefHeight="398.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="73.0" text="Code" />
-                      <TableColumn prefWidth="122.0" text="Nom" />
-                        <TableColumn prefWidth="108.0" text="Prenom" />
+                      <TableColumn fx:id="codeEtudiant" prefWidth="73.0" text="Code" />
+                      <TableColumn fx:id="nomEtudiant" prefWidth="122.0" text="Nom" />
+                        <TableColumn fx:id="prenomEtudiant" prefWidth="108.0" text="Prenom" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -52,19 +52,19 @@
                         <Label text="Master" GridPane.rowIndex="4" />
                         <Label text="Code Etudiant" />
                         <Label text="Semestre" GridPane.rowIndex="5" />
-                        <Label text="Label1" GridPane.columnIndex="1" />
-                        <Label text="Label2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="Label3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="Label4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label text="Label5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Label text="Label6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="codeEtudiantLabel" text="Label1" GridPane.columnIndex="1" />
+                        <Label fx:id="nomLabel" text="Label2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="prenomLabel" text="Label3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="dateDeNaissanceLabel" text="Label4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="MasterLabel" text="Label5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="SemestreLabel" text="Label6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                   <ButtonBar layoutX="73.0" layoutY="358.0" prefHeight="40.0" prefWidth="333.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="16.0">
                     <buttons>
-                      <Button mnemonicParsing="false" text="Nouveau" />
+                      <Button mnemonicParsing="false" onAction="#handleNewEtudiant" text="Nouveau" />
                         <Button mnemonicParsing="false" text="Exporter" />
-                        <Button mnemonicParsing="false" text="Supprimer" />
+                        <Button mnemonicParsing="false" onAction="#handleDeleteEtudiant" text="Supprimer" />
                     </buttons>
                   </ButtonBar>
                </children>

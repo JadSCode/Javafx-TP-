@@ -8,6 +8,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import util.DateHelper;
 
 public class Etudiant extends Personne {
 
@@ -27,8 +28,12 @@ public class Etudiant extends Personne {
 		this(new SimpleStringProperty(codeEtudiant), new SimpleStringProperty(nom), new SimpleStringProperty(prenom), new SimpleObjectProperty<LocalDate>(dateDeNaissance), new SimpleStringProperty(masterIntitule), new SimpleIntegerProperty(semestreEns));
 	}
 	
-		public Etudiant(String codeEtudiant, String nom, String prenom) {
-		this(codeEtudiant, nom, prenom, LocalDate.of(2016, 03, 12), "", 0);
+	public Etudiant(String codeEtudiant, String nom, String prenom) {
+		this(codeEtudiant, nom, prenom, DateHelper.parse("01/01/2016"), "--", 0);
+	}
+	
+	public Etudiant(){
+		this("", "","");
 	}
 
 	
